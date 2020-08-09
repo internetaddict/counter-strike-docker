@@ -1,0 +1,28 @@
+version: "3"
+services:
+  cstrike:
+    image: internetaddict/cstrike16:basic
+    restart: on-failure
+    environment:
+      MAXPLAYERS: 12
+      START_MAP: "de_rats"
+      SERVER_NAME: "My cstrike 1.6 server"
+      START_MONEY: 800
+      BUY_TIME: 0.25
+      # 0 = disabled, 1 = enabled 
+      FRIENDLY_FIRE: 0
+      SERVER_PASSWORD: "cstrike"
+      RCON_PASSWORD: "cstrike"
+      # put your steam_id here
+      ADMIN_STEAM: "0:1:1234566"
+      RESTART_ON_FAIL: "yes"
+    ports:
+      # VAC Port
+      - "26900:26900/udp"
+      # HLTV Transmission Port
+      - "27020:27020/udp"
+      # Game Transmission and Pings
+      - "27015:27015/udp"
+      # RCON PORT
+      - "27015:27015"
+
