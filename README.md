@@ -66,5 +66,6 @@ This project is a fork of [counter-strike-docker](https://github.com/jimtouz/cou
 * Added new maps.
 * Added new parameters in run script.
 * Optimized Dockerfile
+* Changed HLDS user from root to unprivileged one
 * Added few amxx's plugins for Qaulity of Life purposes
 * Added docker-compose.yml file with example environment configuration
